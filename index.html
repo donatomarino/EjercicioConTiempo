@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <title>Formulario</title>
+    <style>
+        body {
+            width: 1000px;
+            margin: auto;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div {
+            margin: 20px auto;
+        }
+
+        input {
+            width: 100%;
+            text-align: center;
+            height: 50px;
+            border: none;
+            border-bottom: 1px solid black;
+        }
+
+        button {
+            align-content: center;
+            width: 100%;
+            height: 50px;
+            background-color: #00FA9A;
+            color:white;
+            border: none;
+            border-radius: 10px;
+        }
+
+        button:hover{
+            background-color: rgb(163, 218, 255);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Formulario de Registro</h1>
+    <div class="formulario">
+        <form onsubmit="enviarMensaje(event);">
+            <div>
+                <input type="text" name="email" id="email" placeholder="Introduces tu email" required>
+                <p class="mensaje"></p>
+            </div>
+
+            <div>
+                <input type="text" name="password" id="password" placeholder="Introduces password">
+                <p class="mensaje"></p>
+            </div>
+
+            <div>
+                <input type="text" name="confirmaPsw" id="confirmaPsw" placeholder="Confirma password">
+                <p class="mensaje"></p>
+            </div>
+
+            <div>
+                <button type="submit" onclick="verificaPsw()">Enviar</button>
+            </div>
+
+            <div>
+                <p class="mensaje"></p>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
